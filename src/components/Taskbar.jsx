@@ -21,7 +21,9 @@ const Taskbar = ({ onStartClick }) => {
     return () => clearInterval(interval);
   }, []);
 
-  const handleStartClick = () => {
+  const handleStartClick = (e) => {
+    e.stopPropagation();
+    console.log('Start button clicked!');
     setIsStartPressed(!isStartPressed);
     onStartClick();
   };
@@ -61,7 +63,7 @@ const Taskbar = ({ onStartClick }) => {
               <div className="row bottom h-[14px]"></div>
             </div>
           </div>
-          <div className="content flex items-center relative mx-[10px] my-[2px] mr-[24px] mb-[4px] h-[26px]">
+          <div className="content flex items-center relative mx-[10px] my-[2px] mr-[24px] mb-[4px] h-[26px] pointer-events-none">
             <span className="icon">
               <img 
                 src="https://raw.githubusercontent.com/tdcosta100/WindowsXP/master/images/System/WindowsLogo-small.png" 
@@ -78,7 +80,6 @@ const Taskbar = ({ onStartClick }) => {
               start
             </span>
           </div>
-          <div className="overlay absolute left-0 top-0 w-full h-full cursor-pointer" title="Click here to begin"></div>
         </div>
       </div>
 

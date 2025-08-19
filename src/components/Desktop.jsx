@@ -7,6 +7,7 @@ const Desktop = () => {
   const [isStartMenuOpen, setIsStartMenuOpen] = useState(false);
 
   const handleStartClick = () => {
+    console.log('Desktop handleStartClick called, current state:', isStartMenuOpen);
     setIsStartMenuOpen(!isStartMenuOpen);
   };
 

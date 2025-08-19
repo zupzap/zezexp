@@ -303,3 +303,22 @@ body {
   width: 40px;
   text-align: center;
 }
+
+/* Start Menu Styles */
+.start-menu {
+  z-index: 1001;
+}
+
+.user-header {
+  background: linear-gradient(to right, #245edb 0%, #3f7def 50%, #245edb 100%);
+  border-bottom: 1px solid #0054e3;
+}
+
+.start-menu .border-r {
+  border-right: 1px solid #c7d2fe;
+}
+
+/* Start Menu hover effects */
+.start-menu div:hover {
+  transition: background-color 0.1s ease;
+}
